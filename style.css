@@ -35,3 +35,37 @@ body{
     color: whitesmoke;
     font-size: 25px;
 }
+
+.scoreboard-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border:10px solid white;
+    color: whitesmoke;
+    width: 60%;
+    margin: 30px auto;
+}
+
+.scoreboard-section > img{
+    width: 100px;
+    height: 100px;
+}
+.player-section,.enemy-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.score{
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid red;
+}
+
+.score > div{
+    font-size: 40px;
+    font-weight: 500px;
+    padding: 40px;
+}
