@@ -15,32 +15,38 @@
         </div>
     </div>
     <div class="information-section">
-        <div class="result-header">Pick a weapon</div>
-        <div class="result-information">Lorem ipsum dolor sit amet</div>
+        <div class="result-header" id="resultHeader">Pick a weapon</div>
+        <div class="result-information" id="resultMessage">Lorem ipsum dolor sit amet</div>
     </div>
     <div class="scoreboard-section">
         <div class="player-section">
-            <img alt="player selection">
+            <img id="playerChoice" alt="player selection">
             <p>PLAYER</p>
         </div>
         <div class="score">
-             <div class="player-score">
+             <div class="player-score" id="playerScore">
                 0
              </div>
              <div>-</div>
-             <div class="enemy-score">
+             <div class="enemy-score" id="enemyScore">
                 0
              </div>
         </div>
         <div class="enemy-section">
-            <img alt="enemy selection">
+            <img id ="enemyChoice" alt="enemy selection">
             <p>ENEMY</p>
         </div>
     </div>
     <div class="weapon-section">
-        <img id="rock" alt="rock">
-        <img id="paper" alt="paper">
-        <img id="scissors" alt="scissors">
+        <button id="rock">
+            <img alt="rock">
+        </button>
+        <button id="paper">
+            <img alt="paper">
+        </button>
+        <button id="scissors">
+            <img alt="scissors">
+        </button>      
     </div>  
 </body>
 </html>
