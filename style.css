@@ -69,3 +69,18 @@ body{
     font-weight: 500px;
     padding: 40px;
 }
+
+.weapon-section{
+    display:flex;
+    justify-content: space-evenly;
+    width: 60%;
+    margin: 0 auto;
+    align-items: center;
+    border: 10px solid white;
+}
+
+.weapon-section > img{
+    width: 250px;
+    height:250px;
+    border: 2px solid red;
+}
