@@ -84,3 +84,25 @@ body{
     height:250px;
     border: 2px solid red;
 }
+
+.result-section{
+    display:flex;
+    flex-direction:column;
+    width: 60%;
+    margin: 60px auto;
+    align-items: center;
+    border: 10px solid white;
+}
+
+.result-Announcement{
+    padding: 20px 0;
+    font-size: 30px;
+    font-weight: 300px;
+    color: whitesmoke;
+}
+
+.reset-button{
+    padding: 10px ;
+    margin-bottom:20px;
+    visibility: hidden;
+}
