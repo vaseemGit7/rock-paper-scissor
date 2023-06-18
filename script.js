@@ -112,24 +112,30 @@ function updateChoice(playerSelection,computerSelection){
     switch(playerSelection){
         case 'rock':
             playerChoice.setAttribute('alt','rock');
+            playerChoice.setAttribute('src','./images/rock.png');
             break;
         case 'paper':
             playerChoice.setAttribute('alt','paper');
+            playerChoice.setAttribute('src','./images/paper.png');
             break;
         case 'scissor':
             playerChoice.setAttribute('alt','scissor');
+            playerChoice.setAttribute('src','./images/scissor.png');
             break;        
     }
 
     switch(computerSelection){
         case 'rock':
             enemyChoice.setAttribute('alt','rock');
+            enemyChoice.setAttribute('src','./images/rock.png');
             break;
         case 'paper':
             enemyChoice.setAttribute('alt','paper');
+            enemyChoice.setAttribute('src','./images/paper.png');
             break;
         case 'scissor':
             enemyChoice.setAttribute('alt','scissor');
+            enemyChoice.setAttribute('src','./images/scissor.png');
             break;
     }
 }
