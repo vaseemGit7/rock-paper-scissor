@@ -40,7 +40,7 @@ function playRound(playerSelection,computerSelection){
 }
 
 function isGameOver(){
-    return playerScore==5 || computerScore ==5 ;
+    return playerScore ==5 || computerScore ==5 ;
 }
 
 const resultHeader = document.getElementById("resultHeader");
@@ -49,19 +49,23 @@ const playerChoice = document.getElementById("playerChoice");
 const enemyChoice = document.getElementById("enemyChoice");
 const playerWins = document.getElementById("playerScore");
 const enemyWins = document.getElementById("enemyScore");
-const resultAnnouncement =document.getElementById("resultAnnouncement");
+//const resultAnnouncement =document.getElementById("resultAnnouncement");
 
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorBtn = document.getElementById("scissors");
-const resetBtn = document.getElementById("resetBtn");
+//const resetBtn = document.getElementById("resetBtn");
 
 rockBtn.addEventListener('click',() => handleClick('rock'));
 paperBtn.addEventListener('click',() => handleClick('paper'));
 scissorBtn.addEventListener('click',() => handleClick('scissor'));
-resetBtn.addEventListener('click',resetGame);
+//resetBtn.addEventListener('click',resetGame);
 
 function handleClick(playerSelection){
+
+    if(isGameOver()){
+        openEndGame();
+    }
 
     const computerSelection = getComputerSelection();
     playRound(playerSelection,computerSelection);
@@ -69,6 +73,9 @@ function handleClick(playerSelection){
     updateScore();
     updateChoice(playerSelection,computerSelection);
     
+    if(isGameOver()){
+        openEndGame();
+    }
     
 }
 
@@ -129,6 +136,20 @@ function updateChoice(playerSelection,computerSelection){
     }
 }
 
+function openEndGame(){
+    disableWeapons();
+    console.log('EndGame opened!');
+}
+
 function resetGame(){
     window.location.reload();
+}
+
+
+function disableWeapons(){
+    const weaponsBtn = document.querySelectorAll('.weapon');
+
+    weaponsBtn.forEach((weapon)=>{
+        weapon.setAttribute('disabled','');
+    });
 }
