@@ -1,17 +1,23 @@
 body{
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Fredoka One';
+    color: #000;
     margin: 0;
     padding: 0;
-    background-color: #033B4D;
+    background-color: #FFD600E5;
 }
 
 .nav{
+    font-family: 'Luckiest Guy', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
     padding: 40px ;
-    color: whitesmoke;
+    color: #000000;
+    text-shadow: 0px 4px 4px #984747;
 }
 
 .information-section{
@@ -26,24 +32,21 @@ body{
 
 .result-header{
     padding: 10px 0;
-    color: whitesmoke;
     font-size: 30px;    
 }
 
 .result-information{
     padding: 10px 0;
-    color: whitesmoke;
     font-size: 25px;
 }
 
 .scoreboard-section{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    /*border:10px solid white;*/
-    color: whitesmoke;
     width: 60%;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .player-section > img ,.enemy-section > img{
@@ -51,21 +54,20 @@ body{
     height: 100px;
 }
 .player-section,.enemy-section{
+    font-size: 30px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
-    /*border: 2px solid red;*/
+    padding: 20px ;
 }
 
 .score{
     display: flex;
     justify-content: space-evenly;
-    /*border: 2px solid red;*/
 }
 
 .score > div{
-    font-size: 40px;
+    font-size: 80px;
     font-weight: 500px;
     padding: 40px;
 }
@@ -80,27 +82,49 @@ body{
 }
 
 .weapon, .weapon>img{
-    width: 250px;
-    height:250px;
+    width: 200px;
+    height:200px;
+    background: #EAC500;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(140, 50, 50, 0.25);
+    transition: 0.2s all;
 }
 
 .result-section{
     display:flex;
     flex-direction:column;
     width: 60%;
-    margin: 60px auto;
+    margin: 40px auto;
     align-items: center;
     /*border: 10px solid white;*/
 }
 
 .champion-message{
-    padding: 20px 0;
-    font-size: 30px;
-    font-weight: 300px;
-    color: whitesmoke;
+    padding: 10px 0;
+    font-size: 50px;
+    font-weight: 500px;
 }
 
 .reset-button{
-    padding: 10px ;
+    font-family: 'Fredoka One';
+    font-size: 30px;
+    padding: 20px ;
     margin-bottom:20px;
+    background: #8C3232;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 4px 4px 4px #EAC500;
+    transition: 0.2s all;
+}
+
+.weapon:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.reset-button:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }

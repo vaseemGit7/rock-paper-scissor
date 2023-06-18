@@ -112,30 +112,30 @@ function updateChoice(playerSelection,computerSelection){
     switch(playerSelection){
         case 'rock':
             playerChoice.setAttribute('alt','rock');
-            playerChoice.setAttribute('src','./images/rock.png');
+            playerChoice.setAttribute('src','./images/rock-icon.png');
             break;
         case 'paper':
             playerChoice.setAttribute('alt','paper');
-            playerChoice.setAttribute('src','./images/paper.png');
+            playerChoice.setAttribute('src','./images/paper-icon.png');
             break;
         case 'scissor':
             playerChoice.setAttribute('alt','scissor');
-            playerChoice.setAttribute('src','./images/scissor.png');
+            playerChoice.setAttribute('src','./images/scissor-icon.png');
             break;        
     }
 
     switch(computerSelection){
         case 'rock':
             enemyChoice.setAttribute('alt','rock');
-            enemyChoice.setAttribute('src','./images/rock.png');
+            enemyChoice.setAttribute('src','./images/rock-icon.png');
             break;
         case 'paper':
             enemyChoice.setAttribute('alt','paper');
-            enemyChoice.setAttribute('src','./images/paper.png');
+            enemyChoice.setAttribute('src','./images/paper-icon.png');
             break;
         case 'scissor':
             enemyChoice.setAttribute('alt','scissor');
-            enemyChoice.setAttribute('src','./images/scissor.png');
+            enemyChoice.setAttribute('src','./images/scissor-icon.png');
             break;
     }
 }
@@ -152,10 +152,10 @@ function resetGame(){
 
 function disableWeapons(){
     const weaponsBtn = document.querySelectorAll('.weapon');
-
     weaponsBtn.forEach((weapon)=>{
         weapon.setAttribute('disabled','');
     });
+
 }
 
 function getFinalMessage(){
