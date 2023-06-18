@@ -94,7 +94,7 @@ body{
     border: 10px solid white;
 }
 
-.result-announcement{
+.champion-message{
     padding: 20px 0;
     font-size: 30px;
     font-weight: 300px;
@@ -104,5 +104,4 @@ body{
 .reset-button{
     padding: 10px ;
     margin-bottom:20px;
-    visibility: hidden;
 }

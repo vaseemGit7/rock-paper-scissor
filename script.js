@@ -43,23 +43,21 @@ function isGameOver(){
     return playerScore ==5 || computerScore ==5 ;
 }
 
+const body = document.querySelector('body');
 const resultHeader = document.getElementById("resultHeader");
 const resultMessage = document.getElementById("resultMessage");
 const playerChoice = document.getElementById("playerChoice");
 const enemyChoice = document.getElementById("enemyChoice");
 const playerWins = document.getElementById("playerScore");
 const enemyWins = document.getElementById("enemyScore");
-//const resultAnnouncement =document.getElementById("resultAnnouncement");
 
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorBtn = document.getElementById("scissors");
-//const resetBtn = document.getElementById("resetBtn");
 
 rockBtn.addEventListener('click',() => handleClick('rock'));
 paperBtn.addEventListener('click',() => handleClick('paper'));
 scissorBtn.addEventListener('click',() => handleClick('scissor'));
-//resetBtn.addEventListener('click',resetGame);
 
 function handleClick(playerSelection){
 
@@ -138,6 +136,7 @@ function updateChoice(playerSelection,computerSelection){
 
 function openEndGame(){
     disableWeapons();
+    getFinalMessage();
     console.log('EndGame opened!');
 }
 
@@ -145,11 +144,34 @@ function resetGame(){
     window.location.reload();
 }
 
-
 function disableWeapons(){
     const weaponsBtn = document.querySelectorAll('.weapon');
 
     weaponsBtn.forEach((weapon)=>{
         weapon.setAttribute('disabled','');
     });
+}
+
+function getFinalMessage(){
+    const resultDiv = document.createElement('div');
+    resultDiv.classList.add('result-section');
+    body.appendChild(resultDiv);
+
+    const championMessage = document.createElement('div');
+    championMessage.classList.add('champion-message');
+    resultDiv.appendChild(championMessage);
+
+    const resetBtn = document.createElement('button');
+    resetBtn.classList.add('reset-button');
+    resetBtn.textContent ='Play Again?'
+    resultDiv.appendChild(resetBtn);
+
+    resetBtn.addEventListener('click',resetGame);
+
+    if(playerScore>computerScore){
+        championMessage.textContent="You Won!"
+    }
+    else{
+        championMessage.textContent="You Lost!"
+    }  
 }
